@@ -1,0 +1,247 @@
+{
+    "linux": {
+        "pwd": {
+            "command": "pwd",
+            "description": "Print Working Directory"
+        },
+        "cd": {
+            "command": "cd [options]",
+            "examples": [
+                "cd (land to the home directory)",
+                "cd / (land root dirrectory)",
+                "cd ~",
+                "cd Documents/'My Books'/Tamil (can use double or singl quotes or back slash <My\\ Books> when the dirrecty name is with space)"
+            ],
+            "description": "change the current working directory"
+        },
+        "clear": {
+            "command": "clear",
+            "examples": [],
+            "description": "clear the terminal"
+        },
+        "ls": {
+            "command": "ls [options] [fd]",
+            "examples": [
+                "ls (list all in current directory)",
+                "ls / (list all in the root directory)",
+                "ls /Documents (list all in the given directory)",
+                "ls ~ (list all in the home dirrectory)",
+                "ls .. (list all in the one directory back)",
+                "ls ../..",
+                "ls -l (list conntent in long formet)",
+                "ls -a (list hiddn files also)",
+                "ls Documents/*.pdf",
+                "ls -l > out.txt (save the results to out.txt)",
+                "ls -d */ (list all sub directories)",
+                "man ls (list all refernce for ls)"
+            ],
+            "description": "list all contents in the directory"
+        },
+        "cat": {
+            "command": "cat [options] file1 file2 ..",
+            "examples": [
+                "cat (To echo somthing)",
+                "cat file (Print the conntent of the file)",
+                "cat file1 file 2 (Print the conntent of multiple files)",
+                "cat -b file (Print the conntent of the file with line numbers to non blank lines)",
+                "cat -n file (line nubers to all lines)",
+                "cat -s file (remove multiple balnk lines to single line)",
+                "cat -E file (Mark $ sign to end of each line)",
+                "cat > file (wite conntent to the file)",
+                "cat >> file (append conntent to the file)",
+                "cat file file1 > file2 file (read conntent form files to new file)",
+                "man cat (list all refernce for cat)"
+            ],
+            "description": "list all contents in the directory"
+        },
+        "mkdir": {
+            "command": "mkdir [oprions] dir",
+            "examples": [
+                "mkdir Folder (create folder)",
+                "mkdir Folder/Folder1 (create folder1 inside existing folder)",
+                "mkdir -p Folder/child OR mkdir --parents Folder/child (create folder with sub folder)",
+                "mkdir {Folder1,Folder2,Folder3} (Create multipe folders)",
+                "mkdir -p Parent/{Folder1,Folder2,Folder3} (Create multipe sub folders inside a new paren folder)"
+            ],
+            "description": "make directory"
+        },
+        "rmkdir": {
+            "command": "rmkdir [oprions] dir",
+            "examples": [
+                "rmkdir Folder (Remover folder)",
+                "rmkdir Folder/Folder1 (Remove the sub folder)",
+                "rmkdir -p Folder/child OR rmkdir --parents Folder/child (Remove folder with sub folder)",
+                "rmkdir {Folder1,Folder2,Folder3} (Remove multipe folders)",
+                "rmkdir -p Parent/{Folder1,Folder2,Folder3} (Remove multipe sub folders inside a parent folder)",
+                "rmkdir -pv Folder/child (Remove folders with output )"
+            ],
+            "description": "remove directory"
+        },
+        "rm": {
+            "command": "rm [oprions] [dir OR file]",
+            "examples": [
+                "rm file (Remove file)",
+                "rm -r Folder (Remove folder with all contents andsub folders)"
+            ],
+            "description": "remove files with or without directory"
+        },
+        "cp": {
+            "command": "cp [options] source destination",
+            "examples": [
+                "cp file1 file2 (copy file1 as file2)",
+                "cp file file1 dir (copy files to directory)",
+                "cp file -i dir (validate before overight)",
+                "cp -R Folder folder1 (copy one folder to another)",
+                "man cp (list all refernce for cp)"
+            ],
+            "description": "Copy file from one destination to another"
+        },
+        "mv": {
+            "command": "mv [options] source destination",
+            "examples": [
+                "mv file1 file2 (move or rename file)",
+                "mv file folder (Move the file to Folder)",
+                "mv folder/file folder2 (move file one directory to another)",
+                "mv file -i folder (validate before Move and overwrite the file to Folder)",
+                "mv folder1 folder2 (move folder1 to folder2)"
+            ],
+            "description": "Move file to another destination"
+        },
+        "touch": {
+            "command": "touch file",
+            "examples": [
+                "touch file (create new file if not exists else update the timeline)"
+            ],
+            "description": "Create empty file"
+        },
+        "nano":{
+            "command":"nano file",
+            "examples":[
+                "nano file.txt (Open file in terminel to edit <somtime new file>)"
+            ],
+            "description":"nano is a text editor"
+        },
+        "sudo":{
+            "command":" sudo [other command to execute]",
+            "examples":[
+                "sudo -s (open as root user)"
+            ],
+            "description":"<superuser do> used to give permission"
+        },
+        "kill":{
+            "command":"kill -flags PID",
+            "examples":[
+                "kill PID (kill the process)",
+                "kill -KILL PID (kill the process with force)",
+                "kill -9 PID"
+            ],
+            "description":"kill the pocess"
+        },
+        "ps":{
+            "command":"ps [options]",
+            "examples":[
+                "ps -ux (list all process for current user)",
+                "ps -aux (listt all process for all users)",
+                "ps -U <username> (list all process for given user)"
+            ],
+            "description":"list current process"
+        },
+        "pidof":{
+            "command":"pidof process-name",
+            "examples":[],
+            "description":"Find the process id of the given process"
+        },
+        "echo":{
+            "command":"echo <content>",
+            "examples":[
+                "echo Hello world (Print Hello world)",
+                "echo $var (Printh value of the variable var)",
+                "echo -e 'some \n text' (Print with escape charectors)"
+            ],
+            "description":"Dispaly the given content or the value of the variable"
+        },
+        "chmod":{
+            "command":"chmod [options]",
+            "examples":[
+                "chmod o+x (Give executable permission for others)",
+                "chmod o+w (Give write permission for others)",
+                "chmod g+wx (Give permission for group)"
+            ],
+            "description":"Change permission"
+        }
+    },
+    "git": {
+        "gitLogin": {
+            "command": "gh auth login"
+        },
+        "init": {
+            "command": "git init / git init -b <branch name>"
+        },
+        "config":{
+            "command":"git config [option] [key] [value]",
+            "examples":[
+                "git config --global user.name <name> (configure git user name globaly)",
+                "git config --global user.email <email> (configure git email globaly)",
+                "git config -- global core.editor 'code --wait' (configure vscode as default editor)",
+                "git config --global -e (open configuration file in editor)",
+                "git config --global core.autocrlf input (handle end of line)"
+            ],
+            "description":"configure git for global or local"
+        },
+        "add": {
+            "command": "git add ."
+        },
+        "commit": {
+            "command": "git commit -m <message>"
+        },
+        "createRepo": {
+            "command": "gh repo create"
+        },
+        "clearCach": {
+            "command": "git rm --cached <file name>"
+        }
+    },
+    "docker": {
+        "image": {
+            "pull": {
+                "command": "docker pull <image>",
+                "description": ""
+            },
+            "remove": {
+                "command": "docker rmi <Image>"
+            }
+        },
+        "Container": {
+            "start": {
+                "command": "docker start <Container_ID>"
+            },
+            "list": {
+                "command": "docker ps --all"
+            },
+            "stop": {
+                "command": "docker stop <Container_ID>"
+            },
+            "kill": {
+                "command": "docker kill <Container_ID>"
+            },
+            "remove": {
+                "command": "docker rm <Container_ID>"
+            },
+            "removeAllStoped": {
+                "command": "docker container prune [OPTIONS]"
+            },
+            "executeBash": {
+                "command": "docker exec -it <Container_ID> bash"
+            }
+        }
+    },
+    "minikube": {
+        "start": {
+            "command": "minikube start --driver=<driver>"
+        },
+        "status": {
+            "command": "minikube status"
+        }
+    },
+    "kubenates": {}
+}
