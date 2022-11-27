@@ -192,13 +192,51 @@
             "command": "git add ."
         },
         "commit": {
-            "command": "git commit -m <message>"
+            "command": "git commit -m <message>",
+            "examples":[
+                "git commit -m <message> (commite with one line message)",
+                "git commit (This will open the git default text editer where we can add multi line commit message)",
+                "git commit -a -m <message> / git commit -am <message> (commit all changes without stagging)"
+            ],
+            "description":"commit changes"
         },
         "createRepo": {
             "command": "gh repo create"
         },
         "clearCach": {
             "command": "git rm --cached <file name>"
+        },
+        "log":{
+            "command":"git log",
+            "examples":[],
+            "description":""
+        },
+        "ls-files":{
+            "command":"git ls-files",
+            "examples":[
+                "git ls-files (list all files in git)"
+            ],
+            "description":"list git files"
+        },
+        "rm":{
+            "command":"git rm [options]",
+            "examples":[
+                "git rm file (remove the file from git.)",
+                "git rm *.ext (remove files usign extention)"
+            ],
+            "description":"remove files from git."
+        },
+        "mv":{
+            "command":"git mv [options]",
+            "examples":[
+                "git mv file1 file2 (rename existing git file with name file1 to file2)"
+            ],
+            "description":"rename git files"
+        },
+        "status":{
+            "command":"git status",
+            "examples":[],
+            "description":"check git status"
         }
     },
     "docker": {
