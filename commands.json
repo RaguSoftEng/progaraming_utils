@@ -286,7 +286,8 @@
           "gen-key":{
             "command": "ssh-keygen -t ed25519 -C \"email\"",
             "examples":[
-                "ssh-keygen -t ed25519 -C \"raguvaran_soft_eng@outlook.com\" (generate key)",
+                "ssh-keygen -t ed25519 -C \"raguvaran_soft_eng@outlook.com\" (generate key with ed25519)",
+                "ssh-keygen -t rsa -b 4096 -C \"raguvaran_soft_eng@outlook.com\" (generate key with rsa)",
                 "/home/raguvaran/.ssh/id_ed25519_git_RaguSoftEng (change the key file)"
             ]
           },
