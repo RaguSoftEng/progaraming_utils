@@ -281,5 +281,20 @@
             "command": "minikube status"
         }
     },
-    "kubenates": {}
+    "kubenates": {},
+    "ssh-key-auth":{
+          "gen-key":{
+            "command": "ssh-keygen -t ed25519 -C \"email\"",
+            "examples":[
+                "ssh-keygen -t ed25519 -C \"raguvaran_soft_eng@outlook.com\" (generate key)",
+                "/home/raguvaran/.ssh/id_ed25519_git_RaguSoftEng (change the key file)"
+            ]
+          },
+          "ssh-agent":{
+            "command": "eval \"$(ssh-agent -s)\""
+          },
+          "ssh-add":{
+            "command": "ssh-add ~/.ssh/id_ed25519_git_RaguSoftEng"
+          }
+    }
 }
